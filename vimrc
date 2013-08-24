@@ -9,6 +9,7 @@ set expandtab
 set background=dark
 set number
 set cmdheight=2
+set list
 
 " Syntax & Indentation
 syntax on
