@@ -12,9 +12,9 @@ set cmdheight=2
 set list
 
 " Syntax & Indentation
-syntax on
-filetype plugin indent on
 call pathogen#infect()
+syntax enable
+filetype plugin indent on
 
 " Key Mappings
 map <S-Enter> O<Esc>j
@@ -22,7 +22,7 @@ map <CR> o<Esc>k
 map <Backspace> d
 
 " CoffeeScript
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+" au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn
