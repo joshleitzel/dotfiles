@@ -1,3 +1,6 @@
+" Follow the leader
+let mapleader = ','
+
 " Basic Settings
 set nocompatible            " Vim > Vi
 set fileencoding=utf-8      " UTF-8
@@ -17,6 +20,10 @@ set colorcolumn=80
 call pathogen#infect()
 syntax enable
 filetype plugin indent on
+
+" Colors & Visual Aids
+hi CursorColumn cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
+nnoremap <Leader>c :set cursorcolumn!<CR>
 
 " Key Mappings
 map <S-Enter> O<Esc>j
