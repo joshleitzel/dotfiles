@@ -15,6 +15,7 @@ set cmdheight=2
 set list
 set textwidth=80
 set colorcolumn=80
+set noswapfile
 
 " Syntax & Indentation
 call pathogen#infect()
