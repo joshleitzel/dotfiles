@@ -32,7 +32,7 @@ map <CR> o<Esc>k
 map <Backspace> d
 
 " CoffeeScript
-" au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+autocmd BufWritePost *.coffee silent make!
 
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn
