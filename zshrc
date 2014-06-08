@@ -25,4 +25,6 @@ paths=(
 )
 export PATH=$(IFS=: ; echo "${paths[*]}")
 
+# Vimalicious
 EDITOR='vim'
+bindkey -v
