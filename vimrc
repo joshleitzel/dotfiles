@@ -32,7 +32,7 @@ map <CR> o<Esc>k
 map <Backspace> d
 
 " CoffeeScript
-autocmd BufWritePost *.coffee silent make!
+" autocmd BufWritePost *.coffee silent make!
 
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn

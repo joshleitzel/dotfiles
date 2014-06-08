@@ -9,15 +9,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 paths=(
+  $PATH
+  $HOME/.rvm/bin
+  $HOME/.cabal/bin
   /usr/local/share/npm/bin
   /usr/local/bin
   /usr/bin
-  /Users/josh/.rvm/bin
-  /Users/josh/.cabal/bin
-  /Users/josh/.rvm/gems/ruby-1.9.3-p448/bin
-  /Users/josh/.rvm/gems/ruby-1.9.3-p448@global/bin
-  /Users/josh/.rvm/rubies/ruby-1.9.3-p448/bin
-  /Users/josh/.rvm/bin:/usr/bin
+  /usr/bin
   /bin
   /usr/sbin
   /sbin
