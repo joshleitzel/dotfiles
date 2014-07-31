@@ -28,3 +28,6 @@ export PATH=$(IFS=: ; echo "${paths[*]}")
 # Vimalicious
 EDITOR='vim'
 bindkey -v
+
+# Don't override tmux screen names
+DISABLE_AUTO_TITLE=true
