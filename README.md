@@ -7,3 +7,9 @@ ln -s $PWD/rspec ~/.rspec
 ln -s $PWD/vim ~/.vim
 ln -s $PWD/zshrc ~/.zshrc
 ```
+
+Make Vim play nice with Zsh:
+
+```
+sudo mv /etc/zshenv /etc/zshrc
+```

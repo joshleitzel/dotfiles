@@ -1,5 +1,5 @@
 " Follow the leader
-let mapleader = ','
+let mapleader = ';'
 
 " Basic Settings
 set nocompatible            " Vim > Vi
@@ -17,10 +17,26 @@ set textwidth=80
 set colorcolumn=80
 set noswapfile
 
-" Syntax & Indentation
-call pathogen#infect()
-syntax enable
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'jgdavey/tslime.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-surround'
+call vundle#end()
 filetype plugin indent on
+
+" Syntax & Indentation
+syntax enable
 
 " Colors & Visual Aids
 hi CursorColumn cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
@@ -37,3 +53,10 @@ map <Backspace> d
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn
 let g:vim_markdown_folding_disabled=1 " Disable folding
+
+" RSpec.vim
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
