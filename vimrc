@@ -23,7 +23,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
@@ -46,9 +48,6 @@ nnoremap <Leader>c :set cursorcolumn!<CR>
 map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
 map <Backspace> d
-
-" CoffeeScript
-" autocmd BufWritePost *.coffee silent make!
 
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn
