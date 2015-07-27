@@ -32,4 +32,11 @@ bindkey -v
 # Don't override tmux screen names
 DISABLE_AUTO_TITLE=true
 
+# Include autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# run `ls -a` after `cd`
+function chpwd() {
+  emulate -L zsh
+  ls -a
+}
