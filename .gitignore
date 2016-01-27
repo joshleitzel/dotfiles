@@ -1,2 +1,4 @@
 .DS_Store
 *.log
+vim/.vim
+vim/.netrwhist
