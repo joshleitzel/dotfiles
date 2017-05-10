@@ -33,6 +33,9 @@ bindkey -v
 DISABLE_AUTO_TITLE=true
 
 # Include autojump
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # run `ls -a` after `cd`

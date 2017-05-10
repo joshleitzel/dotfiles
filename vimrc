@@ -25,10 +25,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'keith/swift.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -49,6 +51,12 @@ map <S-Enter> O<Esc>j
 map <CR> o<Esc>k
 map <Backspace> d
 
+" Window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Markdown
 au BufEnter,BufNew *.md UniCycleOn
 let g:vim_markdown_folding_disabled=1 " Disable folding
@@ -59,3 +67,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
+
+map <C-n> :NERDTreeToggle<CR>
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
